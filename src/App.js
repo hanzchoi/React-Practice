@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import UserInput from './UserInput';
-import UserOutput from './UserOutput';
+import UserInput from './UserInput/UserInput';
+import UserOutput from './UserOutput/UserOutput';
 import './App.css';
 
 class App extends Component {
@@ -18,7 +18,8 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <UserInput  usernameChangeHandler={this.usernameChangeHandler} />
+        <UserInput  usernameChangeHandler={this.usernameChangeHandler}
+        username={this.state.username}/>
         <UserOutput username={this.state.username}/>
         <UserOutput username={this.state.username}/>
         <UserOutput username={this.state.username}/>
